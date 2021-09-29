@@ -13,7 +13,7 @@ Date: 09/13/2021
 	#DF4C73
 */
 /* CSS Reset */
-body, header, nav, main, footer, img, h1 {
+body, header, nav, main, footer, img, h1, ul {
     margin: 0;
     padding: 0;
     border: 0;
@@ -21,74 +21,76 @@ body, header, nav, main, footer, img, h1 {
 
 /* Style rule for images */
 img {
-    max-width: 5em;
+    max-width: 100%;
+	margin: 0 auto;
     display: block;
 }
+
+/* Hide tab-desk class */
+.tab-desk {
+	display: none;
+}
+
 /* Style rules for header content */
 header {
-	float: left;
-	white-space: nowrap;
-    text-align: left;
-    font-size: 1em;
-	font-family: Lato;
-    color: #FFF;
+    text-align: center;
+	font-family: 'Lato', sans-serif;
+    background-color: #286FB4;
+	padding: 1.2em 0;
 }
 
 header h1 {
     font-weight: bold;
-	font-size: 2em;
-	padding: 0.5em 0 0 1em;
+	font-size: 1.85em;
+	line-height: 0.75em;
+	color: #FFF;
 }
 
 header h2 {
-	color: #286FB4;
+	color: #FFF;
+	font-size:1em;
+	line-height: 0.5em;
 	font-style: italic;
 }
 
 header img {
-	float:left;
-	max-width: 8em;
-	padding-right: 1em;
+	display: inline-block;
 }
 
 /* Style rules for navigation area */
 nav {
-    background-color: #286FB4;
-	font-family: Lato;
+    background-color: #E2F0F9;
+	padding-top: 0.25em;
 }
  
 nav ul {
     list-style-type: none;
-    margin: 0;
-    text-align: right;
+    text-align: center;
 }
  
 nav li {
-    display: inline-block;
-    font-size: 1.3em;
+    display: block;
+	background-color: #FFF;
+    font-size: 1.75em;
+	border: 2px solid #E2F0F9;
+	border-radius: 15px;
 }
  
 nav li a {
     display: block;
-    color: #fff;
+    color: #286FB4;
     text-align: center;
-    padding: 1em;
+    padding: 0.6em;
     text-decoration: none;
 }
 
 /* Style rules for main content */
 main {
-	clear: both;
+	font-family: 'Lato', sans-serif;
     background-color: #E2F0F9;
     overflow: auto;
-    font-family: Lato;
-	padding: 2em 8em;
+	padding: 2% 4%;
 }
-section {
-	padding: 2em;
-	margin: 2em;
-	background-color: #FFF;
-} 
 main p {
     font-size: 1.25em;
 }
@@ -102,26 +104,39 @@ main a {
     color: #286FB4;
     text-align: center;
     padding: 1em;
-	font-size: 1em;
+	font-size: 1.5em;
     text-decoration: none;
 }
-main dl {
-	
-}
 main dt {
-	padding: 0.5em;
-	font-size: 1.25em;
+	padding: 0.6em;
+	font-size: 1.35em;
 	font-weight: bold;
 }
 main dd {
-	font-size: 1em;
+	font-size: 1.1em;
+}
+main ul {
+	margin: 10%;
 }
 main li {
-	font-size: 1.25em;
+	font-size: 1.35em;
 }
 
-/* Style rule for main page highlighted content */
+/* Style rule for main page highlighted content on mobile */
+.leftcontent, .rightcontent {
+	margin: 5% auto;
+	width: 100%;
+	background-color:white;
+	text-align: center;
+}
 
+.leftcontent img, .rightcontent img{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* TEMPORARILY REMOVED | DESKTOP ONLY  
 .leftcontent {
 	float: left;
 	margin: 0 0 1.5em;
@@ -141,46 +156,71 @@ main li {
 .leftcontent img, .rightcontent img{
 	max-width: 300px;
 }
+*/
 
 .clear {
 	clear: both;
 }
-.leftcontent img, .rightcontent img {
-	float: inherit;
-	max-width: 300px;
-}
-
 /* Style rules for about page content */
 #education, #work, #hobbies {
-    width: 29%;
-    float: left;
-    margin: 0% 2% 2%;
+    margin: 2% 0 6%;
+	padding: 1%;
+	background-color: #FFF;
+}
+#education h3, #work h3, #hobbies h3 {
+    text-align: center;
+	line-height: 0.25em;
+	color: #286FB4;
 }
 
 /* Style rules for contact page */
 .map {
-	display: block;
-	width: 100%;
-	margin: auto;
-    border: 1em solid #B0DDE4;
-	width: 100%;
-	height:300px;
-}
-
-#phone, #email, #address {
-     width: 29%;
-     float: left;
-     margin: 0% 2% 2%;
+    border: 5px solid #B0DDE4;
+	width: 95%;
+	height: 50%;
 }
 
 #contact {
     text-align: center;
 }
 
+#phone {
+	background-color: #B0DDE4;
+	margin: 0 auto;
+	width: 90%;
+	border-radius: 8px;
+}
+
+#phone a {
+	color: #FFF;
+	text-decoration: none;
+	font-size: 1.75em;
+	display:block;
+}
+#email {
+	margin: 0 auto;
+	padding: 6% 0;
+}
+
+#email a, #email h3 {
+	display: inline;
+	font-size: 1.25em;
+}
+
+#address {
+	margin: 0 auto;
+	padding: 6% 0;
+}
+
+#address a, #address h3 {
+	display: inline;
+	font-size: 1.25em;
+}
+
 /* Style rules for footer content */
 footer {
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1em;
     clear: both;  
 }
  
