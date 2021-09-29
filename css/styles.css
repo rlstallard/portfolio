@@ -42,14 +42,14 @@ header {
 header h1 {
     font-weight: bold;
 	font-size: 1.85em;
-	line-height: 0.75em;
+	line-height: 0.8em;
 	color: #FFF;
 }
 
 header h2 {
 	color: #FFF;
 	font-size:1em;
-	line-height: 0.5em;
+	line-height: 0.8em;
 	font-style: italic;
 }
 
@@ -169,7 +169,7 @@ main li {
 }
 #education h3, #work h3, #hobbies h3 {
     text-align: center;
-	line-height: 0.25em;
+	line-height: 0.8em;
 	color: #286FB4;
 }
 
