@@ -1,7 +1,7 @@
 /*
 Student Name: Robert Luke Stallard
 File Name: template.html
-Date: 09/13/2021
+Date: 10/11/2021
 */
 
 /*
@@ -117,6 +117,7 @@ main dd {
 }
 main ul {
 	margin: 10%;
+	width: 90%;
 }
 main li {
 	font-size: 1.35em;
@@ -126,7 +127,7 @@ main li {
 .leftcontent, .rightcontent {
 	margin: 5% auto;
 	width: 100%;
-	background-color:white;
+	background-color: #fff;
 	text-align: center;
 }
 
@@ -136,31 +137,10 @@ main li {
 	padding: 0;
 }
 
-/* TEMPORARILY REMOVED | DESKTOP ONLY  
-.leftcontent {
-	float: left;
-	margin: 0 0 1.5em;
-	width: 100%;
-	background-color:white;
-	text-align: center;
-}
-
-.rightcontent {
-	float: right;
-	margin: 0 0 1.5em;
-	width: 100%;
-	background-color:white;
-	text-align: center;
-}
-
-.leftcontent img, .rightcontent img{
-	max-width: 300px;
-}
-*/
-
 .clear {
 	clear: both;
 }
+
 /* Style rules for about page content */
 #education, #work, #hobbies {
     margin: 2% 0 6%;
@@ -227,5 +207,296 @@ footer {
 footer a {
     color: #286FB4;
     text-decoration: none;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 550px), print {  
+	/* Tablet Viewport: Show tab-desk class, disable mobile content */  
+	.tab-desk {
+	    display: block;
+	}
+	.mobile {
+		display: none;
+	}
+	/* Tablet Viewport: Style rules for header content */
+	header {
+		float:left;
+		width: 100%;
+		padding: 0;
+	}
+	
+	header h1 {
+		padding: 1em 0 0;
+		font-size: 2.5em;
+	}
+
+	header h2 {
+		font-size:1.5em;
+	}
+
+	header img {
+		max-width: 20%;
+		float: left;
+		margin: 0;
+		padding: 0;
+	}
+	/* Tablet Viewport: Style rules for navigation */
+	nav {
+		clear: left;
+	    background-color: #E2F0F9;
+		padding-top: 0.5em;
+	}
+ 
+	nav ul {
+	    list-style-type: none;
+	    text-align: center;
+	}
+ 
+	nav li {
+	    display: inline-block;
+	    font-size: 2em;
+		border-radius: 5px;
+	}
+ 
+	nav li a {
+		padding: 0.25em 0.5em;
+	}
+	
+	nav li a:active {
+		background-color: #286FB4;
+		color: #fff;
+	}
+	
+	/* Tablet Viewport: Style rules for main content */
+	
+	main dt {
+		padding: 0.2em 2em;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+	
+	main dd {
+		padding: 0 2em;
+		font-size: 1.25em;
+	}
+	
+	main ul {
+		margin: 2em;
+	}
+	main li {
+		font-size: 1.5em;
+	}
+	
+	/* Tablet Viewport: Highlighted home page sections */
+	.leftcontent, .rightcontent {
+		margin: 1% auto;
+		left: 0px;
+		width: 100%;
+	}
+
+	.leftcontent img, .rightcontent img {
+		display: inline-block;
+		max-width: 50%;
+	}
+	
+	.leftcontent > .text {
+		float: right;
+		width: 50%;
+	}
+	.rightcontent > .text {
+		float: left;
+		width: 50%;
+	}
+	
+	/* Tablet Viewport: Style rules for about page content */
+	#education, #work, #hobbies {
+		float: left;
+		height: 23em;
+		width: 42%;
+	    margin: 2%;
+		padding: 2%;
+		background-color: #FFF;
+	}
+	#hobbies {
+		width: 92%;
+		height: 15em;
+	}
+	#hobbies ul {
+		margin: 2em 40%;
+	}
+	#education h3, #work h3, #hobbies h3 {
+	    text-align: center;
+		line-height: 0.8em;
+		color: #286FB4;
+	}
+	
+	/* Tablet Viewport: Style rules for contact page */
+	.map {
+	    border: 5px solid #B0DDE4;
+		width: 85%;
+		height: 350px;
+		margin: 0 5% 5%;
+	}
+	#phone {
+		background-color: transparent;
+		margin: 0 auto;
+		width: 90%;
+		border: 0;
+		border-radius: 0;
+	}
+	#phone h3, #phone p {
+		display: inline;
+		font-size: 1.25em;
+	    text-align: center;
+	    padding: 0.5em;
+	}
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1050px) {
+	
+	/* Desktop Viewport: Style rules for header content */
+	header {
+		padding: 0;
+		height: 150px;
+		background-image: linear-gradient(#286FB4, #fff);
+		border-bottom: 1px solid #fff;;
+	}
+
+	header h1 {
+		display: block;
+		width: calc(50% - 150px);
+		font-size: 2.2em;
+		text-align: left;
+		padding: 1em 1em 0 4.5em;
+	}
+
+	header h2 {
+		display: block;
+		width: calc(50% - 150px);
+		height: 75px;
+		color: #286FB4;
+		font-size: 1.1em;
+		text-align: left;
+		padding: 0 1em 0 9.25em;
+	}
+
+	header img {
+		max-width: 150px;
+		float: left;
+	}
+	
+	/* Desktop Viewport: Style rules for navigation area */
+	nav {
+		display: block;
+	    background-color: transparent;
+		padding: 2.8em 0.5em;
+		float: right;
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		right: 0;
+		
+	}
+ 
+	nav li {
+	    display: inline-block;
+		background-color: #FFF;
+	    font-size: 1.2em;
+		border: 2px solid #E2F0F9;
+		border-radius: 15px;
+		margin-left: 0.3em;
+	}
+ 
+	nav li a {
+	    padding: 0.5em 0.8em;
+	}
+	
+	nav li:hover {
+		background-color: #286FB4;
+	}
+	nav li a:hover {
+		color: #fff;
+	}
+	
+	/* Desktop Viewport: Style rules for main content */
+	main {
+		clear: both;
+		padding: 2% 4%;
+	}
+	main h3 {
+		font-size: 2.5em;
+	}
+	
+	main dt {
+		padding: 0.6em;
+		font-size: 1.35em;
+		font-weight: bold;
+	}
+	main dd {
+		font-size: 1.1em;
+	}
+	main ul {
+		margin: 15%;
+		width: 90%;
+	}
+	main li {
+		font-size: 1.35em;
+	}
+	
+	/*Desktop Viewport: Style rules for highlighted main page sections */
+	.leftcontent, .rightcontent {
+		margin: 1% 5%;
+		left: 0px;
+		width: 90%;
+	}
+
+	.leftcontent img, .rightcontent img {
+		display: inline-block;
+		max-width: 300px;
+	}
+	
+	.leftcontent > .text {
+		float: right;
+		width: calc(100% - 300px);
+	}
+	.rightcontent > .text {
+		float: left;
+		width: calc(100% - 300px);
+	}
+	
+	/* Desktop Viewport: Style rules for about page content */
+	#education, #work, #hobbies {
+		height: 24em;
+		width: 25%;
+	}
+	#hobbies ul {
+		margin: 15%;
+	}
+
+	/* Desktop Viewport: Style rules for contact page */
+	.map {
+	    border: 5px solid #B0DDE4;
+		width: 70%;
+		height: 350px;
+		margin: 0 auto;
+	}
+	
+	#phone, #email, #address {
+		display: inline-block;
+		float: left;
+		width: 31%;
+		padding: 1em 0 3em;
+	}
+	#phone {
+		background-color: transparent;
+		margin: 0 auto;
+		border: 0;
+		border-radius: 0;
+	}
+	#contact h3, #contact p, #contact a{
+		font-size: 1.5em;
+	    padding: 0.5em 0 0 0.5em;
+	}
 }
  
