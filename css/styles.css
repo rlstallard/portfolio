@@ -1,7 +1,7 @@
 /*
 Student Name: Robert Luke Stallard
 File Name: template.html
-Date: 10/11/2021
+Date: 10/18/2021
 */
 
 /*
@@ -13,7 +13,7 @@ Date: 10/11/2021
 	#DF4C73
 */
 /* CSS Reset */
-body, header, nav, main, footer, img, h1, ul {
+body, header, nav, main, footer, img, h1, ul, article, section, aside, figure, figcaption {
     margin: 0;
     padding: 0;
     border: 0;
@@ -26,6 +26,13 @@ img {
     display: block;
 }
 
+/* Style rule for box sizing applies to all elements */  
+* {  
+	box-sizing: border-box; 
+}
+
+/* Mobile Viewport Style Rules */
+
 /* Hide tab-desk class */
 .tab-desk {
 	display: none;
@@ -35,8 +42,10 @@ img {
 header {
     text-align: center;
 	font-family: 'Lato', sans-serif;
-    background-color: #286FB4;
-	padding: 1.2em 0;
+    background-image: linear-gradient(#286FB4, #E2F0F9);
+	border-bottom: 1px solid #fff;
+	padding: 1em 0;
+	height: 60px;
 }
 
 header h1 {
@@ -44,17 +53,7 @@ header h1 {
 	font-size: 1.85em;
 	line-height: 0.8em;
 	color: #FFF;
-}
-
-header h2 {
-	color: #FFF;
-	font-size:1em;
-	line-height: 0.8em;
-	font-style: italic;
-}
-
-header img {
-	display: inline-block;
+	text-shadow: 2px 2px 4px #B0DDE4;
 }
 
 /* Style rules for navigation area */
@@ -98,6 +97,14 @@ main p {
 main h3 {
 	font-size: 2em;
 }
+main ul {
+	display: inline-block;
+	padding: 0 0 2em 5em;
+}
+
+main dl {
+	padding: 0 0 2em 5em;
+}
 
 main a {
     display: inline-block;
@@ -107,31 +114,55 @@ main a {
 	font-size: 1.5em;
     text-decoration: none;
 }
-main dt {
-	padding: 0.6em;
-	font-size: 1.35em;
-	font-weight: bold;
+main figure {
+	position: relative;
+	max-width: 300px;
+	margin: 2% auto;
+	border: 2px solid #286FB4;
+	font-size: inherit;
 }
-main dd {
-	font-size: 1.1em;
+
+main figcaption {
+	position: absolute;
+	bottom: 0;
+	background: #286FB4;
+	opacity: 0.9;
+	font-style: italic;
+	color: #fff;
+	width: 100%;
+	padding: 5% 1%;
+	text-align: center;
+	font-size: 1.3em;
 }
-main ul {
-	margin: 10%;
-	width: 90%;
+
+main section h3, main section h2 {
+	text-align: center;
+	font-size: 2.5em;
+	text-shadow: 4px 4px 6px #B0DDE4;
 }
-main li {
-	font-size: 1.35em;
+
+main article {
+	margin-bottom: 10%;
+}
+main article h4 {
+	text-align: center;
+	max-width: 300px;
+	margin: 2% auto;
+	padding: 0.8em;
+	font-size: 1.5em;
+	color: #fff;
+	background-color: #286FB4;
 }
 
 /* Style rule for main page highlighted content on mobile */
-.leftcontent, .rightcontent {
+.highlight {
 	margin: 5% auto;
 	width: 100%;
 	background-color: #fff;
 	text-align: center;
 }
 
-.leftcontent img, .rightcontent img{
+.highlight img {
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -167,6 +198,7 @@ main li {
 #phone {
 	background-color: #B0DDE4;
 	margin: 0 auto;
+	padding: 6% 0;
 	width: 90%;
 	border-radius: 8px;
 }
@@ -177,6 +209,7 @@ main li {
 	font-size: 1.75em;
 	display:block;
 }
+
 #email {
 	margin: 0 auto;
 	padding: 6% 0;
@@ -215,31 +248,57 @@ footer a {
 	.tab-desk {
 	    display: block;
 	}
+	
 	.mobile {
 		display: none;
 	}
+	
+	.grid {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-gap: 10px;
+	}
+	
 	/* Tablet Viewport: Style rules for header content */
 	header {
-		float:left;
 		width: 100%;
+		height: 75px;
 		padding: 0;
 	}
 	
 	header h1 {
-		padding: 1em 0 0;
+		position: absolute;
+		width: calc(100% - 75px);
+		left: 75px;
+		text-align: center;
+		padding: 0.2em 0 1em 0;
 		font-size: 2.5em;
 	}
-
-	header h2 {
-		font-size:1.5em;
+	
+	header figure {
+		width: 100%;
+	}
+	
+	header figure img {
+		position: absolute;
+		max-width: 75px;
+		left: 0;
+		top: 0;
 	}
 
-	header img {
-		max-width: 20%;
-		float: left;
-		margin: 0;
-		padding: 0;
+	header figcaption {
+		position: absolute;
+		width: calc(100% - 75px);
+		left: 75px;
+		text-align: center;
+		color: #286FB4;
+		text-shadow: 2px 2px 4px #B0DDE4;
+		font-size: 1.5em;
+		line-height: 0.8em;
+		font-style: italic;
+		padding: 1.7em 0;
 	}
+	
 	/* Tablet Viewport: Style rules for navigation */
 	nav {
 		clear: left;
@@ -268,76 +327,99 @@ footer a {
 	}
 	
 	/* Tablet Viewport: Style rules for main content */
-	
-	main dt {
-		padding: 0.2em 2em;
-		font-size: 1.5em;
-		font-weight: bold;
+	main {
+		font-family: 'Lato', sans-serif;
+	    background-color: #E2F0F9;
+	    overflow: auto;
+		padding: 2% 4%;
 	}
-	
-	main dd {
-		padding: 0 2em;
+	main p {
+	    font-size: 1em;
+	}
+
+	main h3 {
+		font-size: 1.5em;
+	}
+
+	main a {
+	    display: inline-block;
+	    color: #286FB4;
+	    text-align: center;
+	    padding: 1em;
 		font-size: 1.25em;
-	}
-	
-	main ul {
-		margin: 2em;
-	}
-	main li {
-		font-size: 1.5em;
+	    text-decoration: none;
 	}
 	
 	/* Tablet Viewport: Highlighted home page sections */
-	.leftcontent, .rightcontent {
-		margin: 1% auto;
-		left: 0px;
-		width: 100%;
-	}
-
-	.leftcontent img, .rightcontent img {
-		display: inline-block;
-		max-width: 50%;
-	}
 	
-	.leftcontent > .text {
-		float: right;
-		width: 50%;
+	.highlight-grid {
+		display: grid;
+		grid-template-columns: 200px auto 200px;
+		grid-gap: 10px;
 	}
-	.rightcontent > .text {
-		float: left;
-		width: 50%;
+	.highlight > img, .highlight > .text {
+		grid-row-start: 1;
+	}
+	.highlight > img {
+		width: 200px;
+	}
+	.highlight:nth-child(odd) > img {
+		grid-column: 1;
+	}
+	.highlight:nth-child(even) > img {
+		grid-column: 3;
+	}
+	.highlight:nth-child(odd) > .text {
+		grid-column: 2 / span 2;
+	}
+	.highlight:nth-child(even) > .text {
+		grid-column: 1 / span 2;
 	}
 	
 	/* Tablet Viewport: Style rules for about page content */
-	#education, #work, #hobbies {
-		float: left;
-		height: 23em;
-		width: 42%;
-	    margin: 2%;
-		padding: 2%;
-		background-color: #FFF;
+	#education {
+		grid-column: 1;
+	}
+	
+	#work {
+		grid-column: 2;
 	}
 	#hobbies {
-		width: 92%;
-		height: 15em;
+		grid-column: 1 / span 2;
 	}
-	#hobbies ul {
-		margin: 2em 40%;
+	
+	/* Tablet Viewport: Style rules for testimonials page */
+	#testimonials > h3 {
+		grid-column: 1 / span 2;
+		text-align: center;
 	}
-	#education h3, #work h3, #hobbies h3 {
-	    text-align: center;
-		line-height: 0.8em;
-		color: #286FB4;
+	
+	#testimonials > article {
+		grid-column: auto;
 	}
 	
 	/* Tablet Viewport: Style rules for contact page */
+	
+	#contact > h2 {
+		grid-column: 1 / span 2;
+	}
+	#contact aside {
+		grid-column: 1 / span 2;
+	}
+	#address {
+		grid-column: 1 / span 2;
+	}
 	.map {
 	    border: 5px solid #B0DDE4;
 		width: 85%;
 		height: 350px;
 		margin: 0 5% 5%;
 	}
+	#email {
+		grid-column: auto;
+	}
 	#phone {
+		grid-column: auto;
 		background-color: transparent;
 		margin: 0 auto;
 		width: 90%;
@@ -354,36 +436,40 @@ footer a {
 
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 1050px) {
+	.grid {
+		grid-template-columns: 33% 33% 33%;
+		grid-gap: 15px;
+	}
 	
 	/* Desktop Viewport: Style rules for header content */
 	header {
 		padding: 0;
 		height: 150px;
-		background-image: linear-gradient(#286FB4, #fff);
-		border-bottom: 1px solid #fff;;
 	}
 
 	header h1 {
-		display: block;
-		width: calc(50% - 150px);
+		position: absolute;
+		width: 50%;
 		font-size: 2.2em;
 		text-align: left;
-		padding: 1em 1em 0 4.5em;
+		padding: 40px 0 0 100px;
 	}
-
-	header h2 {
-		display: block;
-		width: calc(50% - 150px);
-		height: 75px;
-		color: #286FB4;
-		font-size: 1.1em;
-		text-align: left;
-		padding: 0 1em 0 9.25em;
+	
+	header figure {
+		width: 50%;
 	}
-
-	header img {
+	
+	header figure img {
 		max-width: 150px;
-		float: left;
+	}
+
+	header figcaption {
+		position: absolute;
+		width: 50%;
+		left: 150px;
+		text-align: left;
+		font-size: 1.5em;
+		padding: 85px 0 0 1em;
 	}
 	
 	/* Desktop Viewport: Style rules for navigation area */
@@ -396,7 +482,6 @@ footer a {
 		position: absolute;
 		top: 0;
 		right: 0;
-		
 	}
  
 	nav li {
@@ -428,53 +513,50 @@ footer a {
 		font-size: 2.5em;
 	}
 	
-	main dt {
-		padding: 0.6em;
-		font-size: 1.35em;
-		font-weight: bold;
-	}
-	main dd {
-		font-size: 1.1em;
-	}
-	main ul {
-		margin: 15%;
-		width: 90%;
-	}
-	main li {
-		font-size: 1.35em;
-	}
-	
 	/*Desktop Viewport: Style rules for highlighted main page sections */
-	.leftcontent, .rightcontent {
-		margin: 1% 5%;
-		left: 0px;
-		width: 90%;
+	.highlight-grid {
+		grid-template-columns: 300px auto 300px;
+		grid-gap: 10px;
 	}
-
-	.leftcontent img, .rightcontent img {
-		display: inline-block;
-		max-width: 300px;
-	}
-	
-	.leftcontent > .text {
-		float: right;
-		width: calc(100% - 300px);
-	}
-	.rightcontent > .text {
-		float: left;
-		width: calc(100% - 300px);
+	.highlight > img {
+		width: 300px;
 	}
 	
 	/* Desktop Viewport: Style rules for about page content */
-	#education, #work, #hobbies {
-		height: 24em;
-		width: 25%;
+	#education {
+		grid-column: 1;
 	}
-	#hobbies ul {
-		margin: 15%;
+	
+	#work {
+		grid-column: 2;
 	}
-
+	#hobbies {
+		grid-column: 3;
+	}
+	
+	/* Tablet Viewport: Style rules for testimonials page */
+	#testimonials > h3 {
+		grid-column: 1 / span 3;
+		text-align: center;
+	}
+	
+	#testimonials > article {
+		grid-column: auto;
+	}
+	
 	/* Desktop Viewport: Style rules for contact page */
+	#contact > h2 {
+		grid-column: 1 / span 3;
+	}
+	
+	#contact aside {
+		grid-column: 1 / span 3;
+	}
+	
+	#address {
+		grid-column: auto;
+	}
+	
 	.map {
 	    border: 5px solid #B0DDE4;
 		width: 70%;
@@ -485,8 +567,6 @@ footer a {
 	#phone, #email, #address {
 		display: inline-block;
 		float: left;
-		width: 31%;
-		padding: 1em 0 3em;
 	}
 	#phone {
 		background-color: transparent;
@@ -496,7 +576,5 @@ footer a {
 	}
 	#contact h3, #contact p, #contact a{
 		font-size: 1.5em;
-	    padding: 0.5em 0 0 0.5em;
 	}
 }
- 
