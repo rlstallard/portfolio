@@ -191,6 +191,10 @@ main article h4 {
 	color: #286FB4;
 }
 
+#tech h3 {
+	font-size: 2em;
+}
+
 /* Style rules for table elements */
 table {
     border: 1px solid #286FB4;
@@ -242,6 +246,7 @@ textarea {
 	display: block;
 	width: 100%;
 	height: 120px;
+	border: 2px solid #B0DDE4;
 	resize: none;
 	font-size: 1.5em;
 	margin-bottom: 5%;
@@ -473,7 +478,12 @@ footer a {
 		grid-column: 1;
 	}
 	#tech {
-		grid-column 2;
+		grid-column: 2;
+	}
+	
+	#tech h3 {
+		padding: 1px;
+		margin: 1px;
 	}
 	/* Tablet Viewport: Style rules for testimonials page */
 	#testimonials > h3 {
@@ -508,7 +518,7 @@ footer a {
 	
 	input[type=text], input[type=email], input[type=tel] {
 		width: 80%;
-		padding: 0 auto;
+		margin: 0 auto;
 		
 	}
 
@@ -666,6 +676,11 @@ footer a {
 		grid-column: 1 / span 3;
 	}
 	
+	#tech h3 {
+		font-size: 2.5em;
+		padding: 5px;
+		margin: 5px;
+	}
 	/* Style rules for table elements */
 	table {
 	    width: 70%;
