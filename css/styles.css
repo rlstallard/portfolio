@@ -13,7 +13,7 @@ Date: 10/26/2021
 	#DF4C73
 */
 /* CSS Reset */
-body, header, nav, main, footer, img, h1, ul, article, section, aside, figure, figcaption, input, fieldset, form, textarea {
+body, header, nav, main, footer, img, h1, ul, article, section, aside, figure, figcaption, input, fieldset, form, textarea, audio {
     margin: 0;
     padding: 0;
     border: 0;
@@ -24,6 +24,12 @@ img {
     max-width: 100%;
 	margin: 0 auto;
     display: block;
+}
+
+/* Style rule for media content */
+audio {
+	display: block;
+	margin: 0 auto;
 }
 
 /* Style rule for box sizing applies to all elements */  
