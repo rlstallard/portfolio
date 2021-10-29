@@ -2,7 +2,7 @@
 <!--
 Student Name: Robert Luke Stallard
 File Name: contact.html
-Date: 10/26/2021
+Date: 10/29/2021
 -->
 <html lang="en">
 
@@ -27,7 +27,23 @@ Date: 10/26/2021
 		<h1>Robert "Luke" Stallard</h1>
 	</header>
 	
-	<nav>
+	<!-- Mobile Nav -->  
+	    <nav id="mobile-nav">
+	        <div id="mobile-links">
+				<ul>
+					<li><a href="index.html">Home</a></li>  
+					<li><a href="about.html">About</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li> 
+					<li><a href="testimonials.html">Testimonials</a></li> 
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+	        </div>
+	        <a class="hamburger" onclick="openMobileMenu()">
+	            <div>&#9776;</div>
+	        </a>
+	    </nav>
+	
+	<nav class="tab-desk">
 		<ul>
 			<li><a href="index.html">Home</a></li>  
 			<li><a href="about.html">About</a></li>
@@ -95,6 +111,9 @@ Date: 10/26/2021
 		<p>&copy; Copyright 2021. All Rights Reserved.</p>
 		<p><a href="mailto:rstallard0006@kctcs.edu">rstallard0006@kctcs.edu</a></p>
 	</footer>
+	
+	<script src="scripts/script.js"></script>
+	
 </body>
 
 </html>
