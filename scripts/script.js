@@ -1,7 +1,7 @@
 /*
 	Student Name: Robert Luke Stallard
 	File Name: script.js
-	Date: 10/29/2021
+	Date: 11/04/2021
 */
 
 // Mobile hamburger menu open function
