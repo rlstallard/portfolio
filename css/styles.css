@@ -1,7 +1,7 @@
 /*
 Student Name: Robert Luke Stallard
 File Name: template.html
-Date: 11/04/2021
+Date: 11/10/2021
 */
 
 /*
@@ -347,15 +347,24 @@ form #submit {
 
 /* Style rules for footer content */
 footer {
-    text-align: center;
     font-size: 1em;
 	border-top: 2px solid #286FB4;
-    margin-top: 15px;  
 }
  
 footer a {
     color: #286FB4;
     text-decoration: none;
+}
+
+.social {
+	text-align: center;
+}
+.social img {
+    display: inline-block;
+	padding: 15px;
+}
+.copyright {
+	text-align: center;
 }
 
 /* Media Query for Tablet Viewport */
@@ -604,6 +613,20 @@ footer a {
 		font-size: 1.25em;
 	    text-align: center;
 	    padding: 0.5em;
+	}
+	
+	/* Tablet Viewport: Style rules for footer area */ 
+	.copyright {
+		text-align: left;
+		padding: 0 15px;
+	    float: left;  
+		width: 50%; 
+	}
+ 
+	.social {
+		text-align: right;
+	    float: right;
+	    width: 50%; 
 	}
 }
 
